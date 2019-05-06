@@ -58,15 +58,15 @@
 
 
 #### 3.3 Network Architectures
-Plain network
-VGG nets vs Plain Network vs Residual Network
-VGG net 보다 적은 fileter를 사용하고 낮음 complexity를 보여줌
+- Plain network  
+VGG nets vs Plain Network vs Residual Network  
+VGG net 보다 적은 fileter를 사용하고 낮음 complexity를 보여줌  
 
-Residual Network.
-Plain network에서 shortcut connection을 통해서 Residual Network를 구성함
-- Input과 Output이 같은 dimension인 경우 
-- dimension이 증가한 경우, 아래 option을 통해 dimension을 같게 맞춰줌
-  - (A) zero padding
-  - (B) Projection shortcut 
+- Residual Network  
+  - Plain network에서 shortcut connection을 통해서 Residual Network를 구성함
+  - Input과 Output이 같은 dimension인 경우 
+  - dimension이 증가한 경우, 아래 option을 통해 dimension을 같게 맞춰줌
+    - (A) zero padding
+    - (B) Projection shortcut 
 
 #### 3.4 Implementation
