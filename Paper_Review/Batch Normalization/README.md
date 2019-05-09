@@ -27,14 +27,21 @@
 - __BN transform__  
  ![BN Algorithm_1](../data/BatchNorm_algorithm_1.PNG)
      
-- sub-network의 Input은 고정된 mean(0), variance(1) 값을 가짐  
-  즉, 정규화된 입력을 통해 sub-network 및 전체 network의 학습 속도를 향상시킴 
+- sub-network의 Input은 고정된 mean(0), variance(1) 값을 가짐   
+- Model 학습 시 Internal covariance shift 영향이 적은 input distribution을 계속 학습할 수 있음  
+  따라서, 학습을 가속화시킴 
+
+- BN Transform을 통해 identity transformation을 표현할 수 있음 ??
 
 
-#### 3.1 Training and Inference with Batch-Normalized Networks
+#### 3.1 Training and Inference with Batch-Normalized Networks  
 
+   ![BN Algorithm_2](../data/BatchNorm_algorithm_2.PNG)
 
-#### 3.2 Batch-Normalized Convolutional Networks
+#### 3.2 Batch-Normalized Convolutional Networks  
+- ![BN Algorithm_g](../data/BatchNorm_algorithm_g.PNG)
+  - W, b : 학습 parameter
+  - g(.) : non-linearity function (ex. sigmoid, ReLU)
 
 
 #### 3.3 Batch Normalization enables higher learning rates
