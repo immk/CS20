@@ -8,9 +8,18 @@
 
 ### 1. Introduction
 
+### 2. Towards Reducing Internal Covariate Shift
 
-### 3. Deep Residual Learning 
-#### 3.1 Residual Learning
+### 3. Normalization via Mini-Batch Statistics 
+#### 3.1 Training and Inference with Batch-Normalized Networks
 
 
-#### 3.4 Implementation
+#### 3.2 Batch-Normalized Convolutional Networks
+
+
+#### 3.3 Batch Normalization enables higher learning rates
+
+#### 3.4 Batch Normalization regularizes the model
+
+
+### 4. Experiments
