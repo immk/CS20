@@ -23,7 +23,6 @@
   - __Vanishing/Exploding Gradient 해결방안__ : Normalized initialization, Batch Normalization  
   
 - degradation problem : Network의 depth가 증가할 때, accuracy는 saturated되고 degrade가 발생  
-  - ![Train/Test Error - 20Layer vs 56Layer](../data/ResNet_train_test_error.PNG)
   - 위의 그림에서 볼때 degradation 문제는 overfitting에 의한 것이 아님
     (20-layer model에 layer를 더 추가한 56-layer model의 Train/Test error가 20-layer model 보다 높은 것을 볼 수 있음)  
 
