@@ -43,10 +43,19 @@
  - W, b : 학습 parameter
  - g(.) : non-linearity function (ex. sigmoid, ReLU)
 
-
 #### 3.3 Batch Normalization enables higher learning rates
+- too-high learning rate: gradient issue(exploding 또는 vanishing gradient) 또는 local minima issue를 발생시킴  
+- 그러나, activation의 normalizing을 통해 non-linearity 영역에서 saturated 영역에 갇히는 것을 방지  
+  (gradient == 0인 지점으로 가는것을 막아줌)  
+- large learning rate: layer parameter들의 scale을 증가시킴 (backpropagation 시, gradient를 증폭시키기 때문에)
+- 그러나, BN은 parameter scale에 영향을 끼치지 않음  
 
-#### 3.4 Batch Normalization regularizes the model
+![BN Algorithm_g](../data/BatchNorm_algorithm_3.PNG)
+
+
+#### 3.4 Batch Normalization regularizes the model 
+- Network Generalization 효과
+- Overfitting을 막기위해 drop out 기법을 사용하나, BN에서는 drop out을 사용하지 않거나 strength를 줄일 수 있음
 
 
 ### 4. Experiments
