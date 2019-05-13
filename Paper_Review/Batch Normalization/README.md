@@ -38,11 +38,11 @@
 
    ![BN Algorithm_2](../data/BatchNorm_algorithm_2.PNG)
 
-- Batch Normalization Network & Training
-![BN Algorithm_All](../data/BatchNorm_algorithm_All.PNG)
+- Batch Normalization Network & Training  
+<img src=../data/BatchNorm_algorithm_All.PNG.jpg width="40%">
 
 - cf) 기존 Network  
-![BN Algorithm_pre](../data/BatchNorm_algorithm_pre.PNG)
+<img src=../data/BatchNorm_algorithm_pre.PNG.jpg width="40%">
 
 
 #### 3.2 Batch-Normalized Convolutional Networks  
