@@ -38,6 +38,13 @@
 
    ![BN Algorithm_2](../data/BatchNorm_algorithm_2.PNG)
 
+- Batch Normalization Network & Training
+![BN Algorithm_All](../data/BatchNorm_algorithm_All.PNG)
+
+- cf) 기존 Network  
+![BN Algorithm_pre](../data/BatchNorm_algorithm_pre.PNG)
+
+
 #### 3.2 Batch-Normalized Convolutional Networks  
 ![BN Algorithm_g](../data/BatchNorm_algorithm_g.PNG)
  - W, b : 학습 parameter
@@ -51,12 +58,6 @@
 - 그러나, BN은 parameter scale에 영향을 끼치지 않음  
 
 ![BN Algorithm_g](../data/BatchNorm_algorithm_3.PNG)
-
-- Batch Normalization Network
-![BN Algorithm_All](../data/BatchNorm_algorithm_All.PNG)
-
-- cf) 기존 Network
-![BN Algorithm_pre](../data/BatchNorm_algorithm_pre.PNG)
 
 #### 3.4 Batch Normalization regularizes the model 
 - Network Generalization 효과
