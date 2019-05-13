@@ -31,8 +31,8 @@
   - Model 학습 시 Internal covariance shift 영향이 적은 input distribution을 계속 학습할 수 있음  
     따라서, 학습을 가속화시킴 
 
-  - BN Transform을 통해 identity transformation을 표현할 수 있음 ??
-
+  - BN Transform을 통해 identity transformation을 표현 가능함.
+    - gamma : (Var[x_k])**0.5  / beta: E[x_k]
 
 #### 3.1 Training and Inference with Batch-Normalized Networks  
 
@@ -52,6 +52,11 @@
 
 ![BN Algorithm_g](../data/BatchNorm_algorithm_3.PNG)
 
+- Batch Normalization Network
+![BN Algorithm_All](../data/BatchNorm_algorithm_All.PNG)
+
+- cf) 기존 Network
+![BN Algorithm_pre](../data/BatchNorm_algorithm_pre.PNG)
 
 #### 3.4 Batch Normalization regularizes the model 
 - Network Generalization 효과
