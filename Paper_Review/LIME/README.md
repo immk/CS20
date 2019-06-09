@@ -29,5 +29,16 @@
 
 
 ### 2. The Case for Explanations
-
-
+- "Explaning a Prediction" 이란?  
+   - instance component (ex. 텍스트 단어/이미지 patch)와 model의 예측 사이의 관계를 이해할 수 있도록 정보를 제공하는 것
+ 
+- [Example] ![LIME_process of explaining individual predictions](../data/LIME_Figure_1.PNG)
+   - 예시. 모델이 특정 환자가 독감에 걸렸다고 예측
+     - Explainer(LIME)이 결과를 예측할 때 가장 중요했던 증상을 강조하며 모델을 설명
+     - (GREEN) 독감을 판단하는 중요 인자 (RED) 그에 반하는 증거
+     - 의사는 모델의 예측 결과를 신뢰할지 말지에 대한 결정할 수 있음
+     
+   - 즉, 예측 결과를 판단하게된 정보를 제공한다면 모델의 도움을 받아 의사결정을 하는 것이 유리함
+  
+  
+  
