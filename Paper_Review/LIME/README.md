@@ -95,6 +95,9 @@
 #### 3.3 Sampling for Local Exploration
   
 - LIME은 'model-agnostic'한 Explainer를 찾기 위해서 모델에 대한 어떠한 가정을 하지 않음
-- 
+- 해석 가능한 Input이 변함에 따라 f(x)의 local 동작이 어떻게 변하는지에 대해 학습하기 위해서, ![](../data/LIME_denote_7.gif)에 의해 가중화된 sampling 기법을 통해 ![](../data/LIME_denote_8.gif)를 근사화함
+- ![](../data/LIME_Algorithm_1.PNG) 
+
+- 즉, represenataion 데이터(z)와 원본 데이터(x) 간의 locality(ㅠ)를 weight로 하여, 새로 만들어진 sample(z)과 Label 정보(f(z))를 통해 해석 가능한 모델을 학습함
  
   
