@@ -32,15 +32,16 @@
 - "Explaning a Prediction" 이란?  
    - instance component (ex. 텍스트 단어/이미지 patch)와 model의 예측 사이의 관계를 이해할 수 있도록 정보를 제공하는 것
  
-- 예시 1. 모델이 특정 환자가 독감에 걸렸다고 예측
-  - ![LIME_process of explaining individual predictions](../data/LIME_Figure_1.PNG)
+- __예시 1. 모델이 특정 환자가 독감에 걸렸다고 예측__
+  ![LIME_process of explaining individual predictions](../data/LIME_Figure_1.PNG)
      - Explainer(LIME)이 결과를 예측할 때 가장 중요했던 증상을 강조하며 모델을 설명
      - (GREEN) 독감을 판단하는 중요 인자 (RED) 그에 반하는 증거
      - 의사는 모델의 예측 결과를 신뢰할지 말지에 대한 결정할 수 있음   
    - 즉, 예측 결과를 판단하게된 정보를 제공한다면 모델의 도움을 받아 의사결정을 하는 것이 유리함
    
- - 예시 2. "Christianity" 또는 "Atheism" 분류 
-   - ![LIME_process of explaining individual predictions](../data/LIME_Figure_2.PNG)
+   
+ - __예시 2. "Christianity" 또는 "Atheism" 분류__
+   ![LIME_process of explaining individual predictions](../data/LIME_Figure_2.PNG)
      - 알고리즘1/2에서 'Athenism'으로 판단한 관련성 높은 단어를 보여줌(magenta)
      - 각각 모델의 예측에 대한 설명을 더해준다면 어떤 알고리즘이 정확하게 판단했는지 알수 있음
      - (이 결과는 Accuracy와 같은 metric과 일치하지 않을 수 있음)
@@ -56,6 +57,8 @@
      - 이 경우, 모델 예측에 대한 설명 정보가 제공된다면 쉽게 찾을 수 있음 (Figure 1)
   2. Dataset Shift: 
      - Test 데이터 셋의 특성이 Train 데이터 셋과 다른 경우
+ 
+ ### 3. Local Interpretable Model-Agnostic Explanations. 
  
  
   
