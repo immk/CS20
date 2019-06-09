@@ -96,8 +96,21 @@
   
 - LIME은 'model-agnostic'한 Explainer를 찾기 위해서 모델에 대한 어떠한 가정을 하지 않음
 - 해석 가능한 Input이 변함에 따라 f(x)의 local 동작이 어떻게 변하는지에 대해 학습하기 위해서, ![](../data/LIME_denote_7.gif)에 의해 가중화된 sampling 기법을 통해 ![](../data/LIME_denote_8.gif)를 근사화함
-- ![](../data/LIME_Algorithm_1.PNG) 
 
-- 즉, represenataion 데이터(z)와 원본 데이터(x) 간의 locality(ㅠ)를 weight로 하여, 새로 만들어진 sample(z)과 Label 정보(f(z))를 통해 해석 가능한 모델을 학습함
- 
+- ![](../data/LIME_Algorithm_1.png) 
+
+- 즉, represenataion 데이터(z)와 원본 데이터(x) 간의 locality를 weight로 하여 새로 만들어진 sample과 Label 정보를 통해 해석 가능한 simple model을 학습함
+
+#### 3.4 Sparse Linear Explanations
+- **Loss Function**  
+  ![](../data/LIME_LossFunction_2.PNG)
+  
+  - ![](../data/LIME_denote_10.gif)
+  - Distance Function D  
+    - Text - cosine distance
+    - Image - L2 distance
+
+
+
+
   
