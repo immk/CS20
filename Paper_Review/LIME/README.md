@@ -108,7 +108,7 @@
   ![](../data/LIME_Algorithm_2.PNG)  
   - Black-box 모델의 decision boundary는 굉장히 복잡함 (위의 그림에서 빨간색과 파란색을 나뉘는 경계)
   - 이를 Linear Model로 근사화하는 것은 불가능함
-  - 설명하고자 하는 데이터(굵은 빨간색 십자가)의 근방(local)만 본다면, 그 주변만 근사화한 선형 함수를 만들 수 있음
+  - 설명하고자 하는 instance(굵은 빨간색 십자가)의 근방(local)만 본다면, 그 주변만 근사화한 선형 함수를 만들 수 있음
   - LIME은 instance를 sampling하고 f를 사용하여 예측값을 얻고 그리고 instance의 근접성에 따라 weight 값을 부여함(O/x 및 크기)으로써 해석 가능한 모델(데쉬 라인)를 학습
   - 즉, represenataion 데이터(z)와 원본 데이터(x) 간의 locality를 weight로 하여 새로 만들어진 sample과 Label 정보를 통해 해석 가능한 simple model을 학습함
 
