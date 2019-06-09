@@ -74,24 +74,23 @@
    즉, 어떤 단어나 픽셀의 값이 '있다' 또는 '없다' 여부만을 표현함
    
 #### 3.2 Fidelity-Interpretability Trade-off
-- formulation
-  1. ![](../data/LIME_denote_3.gif) 
-     - explanation 모델
+- Formulation
+  1. ![](../data/LIME_denote_3.gif)  | explanation 모델
      - G: 해석가능한 모델 클래스 (Linear model, decision trees 등)  
      - g의 도메인: ![](../data/LIME_denote_4.gif) (즉, g는 해석가능한 component들의 유무에 따라 동작)  
-  2. ![](../data/LIME_denote_5.gif)
-     - 모델 g의 complexity
+  2. ![](../data/LIME_denote_5.gif)  | 모델 g의 complexity
      - decision tree ![](../data/LIME_denote_5.gif) : Tree의 depth
      - linear models ![](../data/LIME_denote_5.gif) : non-zero weights의 수
-  3. ![](../data/LIME_denote_6.gif)
-     - 설명하고자 하는 모델
+  3. ![](../data/LIME_denote_6.gif)  | 설명하고자 하는 모델
      - Classification에서 f(x)는 x가 특정 class에 속할 probability (또는 binary indicator)을 의미
-  4. ![](../data/LIME_denote_7.gif)
-     - x의 locality를 나타내기 위한 proximity 척도
-  5. ![](../data/LIME_denote_8.gif)
-     - ![](../data/LIME_denote_7.gif) 의 locality에서 g가 f에 얼마나 unfaithful한지를 나타내는 척도 (Loss)
-     
-     
+  4. ![](../data/LIME_denote_7.gif)  | x의 locality를 나타내기 위한 proximity 척도
+  5. ![](../data/LIME_denote_8.gif)  | x의 locality에서 g가 f에 얼마나 unfaithful한지를 나타내는 척도 (Locality-aware Loss)
+  
+- 즉, **Interpretability**와 **Local Fidelity**를 모두 확보하기 위한 Explanation을 찾는 것이 목표
+- 사람이 이해 가능하도록 Complexity는 낮추면서, Locality-aware Loss를 최소화해야함  
+  ![](../data/LIME_LossFunction.PNG)
+  
+#### 3.3 Sampling for Local Exploration
   
 
  
