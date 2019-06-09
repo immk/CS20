@@ -43,8 +43,8 @@
  - __예시 2. "Christianity" 또는 "Atheism" 분류__
    ![LIME_process of explaining individual predictions](../data/LIME_Figure_2.PNG)
      - 알고리즘1/2에서 'Athenism'으로 판단한 관련성 높은 단어를 보여줌(magenta)
-     - 각각 모델의 예측에 대한 설명을 더해준다면 어떤 알고리즘이 정확하게 판단했는지 알수 있음
-     - (이 결과는 Accuracy와 같은 metric과 일치하지 않을 수 있음)
+     - 각각 모델의 예측에 대한 설명을 더해준다면 어떤 알고리즘이 정확하게 판단했는지 알수 있음  
+       (이 결과는 Accuracy와 같은 metric과 일치하지 않을 수 있음)
      - 그러나 모델이 예측함에 있어서 어떤 인자가 중요하게 영향을 끼쳤는지에 대한 정보를 알수 있음
   
 - "In the Wild"에서 모델의 신뢰성 평가는 "Real World"와 다르게 과대 측정되는 경우가 많음  
