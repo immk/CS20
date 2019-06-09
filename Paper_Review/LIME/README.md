@@ -97,9 +97,18 @@
 - LIME은 'model-agnostic'한 Explainer를 찾기 위해서 모델에 대한 어떠한 가정을 하지 않음
 - 해석 가능한 Input이 변함에 따라 f(x)의 local 동작이 어떻게 변하는지에 대해 학습하기 위해서, ![](../data/LIME_denote_7.gif)에 의해 가중화된 sampling 기법을 통해 ![](../data/LIME_denote_8.gif)를 근사화함
 
-- ![](../data/LIME_Algorithm_1.png) 
+- **Represenatation Data 변환 과정**
+  ![](../data/LIME_Algorithm_1.png) 
 
-- 즉, represenataion 데이터(z)와 원본 데이터(x) 간의 locality를 weight로 하여 새로 만들어진 sample과 Label 정보를 통해 해석 가능한 simple model을 학습함
+- **LIME을 통한 Simple Model 학습 과정**
+  ![](../data/LIME_Algorithm_2.png)  
+  
+  - Black-box 모델의 decision boundary는 굉장히 복잡함 (위의 그림에서 빨간색과 파란색을 나뉘는 경계)
+  - 이를 Linear Model로 근사화하는 것은 불가능함
+  - 설명하고자 하는 데이터(굵은 빨간색 십자가)의 근방(local)만 본다면, 그 주변만 근사화한 선형 함수를 만들 수 있음
+  - LIME은 instance를 sampling하고 f를 사용하여 예측값을 얻고 그리고 instance의 근접성에 따라 weight 값을 부여함(O/x 및 크기)으로써 해석 가능한 모델(데쉬 라인)를 학습함
+  
+  - 즉, represenataion 데이터(z)와 원본 데이터(x) 간의 locality를 weight로 하여 새로 만들어진 sample과 Label 정보를 통해 해석 가능한 simple model을 학습함
 
 #### 3.4 Sparse Linear Explanations
 - **Loss Function**  
@@ -110,6 +119,7 @@
     - Text - cosine distance
     - Image - L2 distance
 
+### 4. Submodular Pick for Explaining Models
 
 
 
