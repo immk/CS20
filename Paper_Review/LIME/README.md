@@ -48,7 +48,7 @@
      - 그러나 모델이 예측함에 있어서 어떤 인자가 중요하게 영향을 끼쳤는지에 대한 정보를 알수 있음
   
 - "In the Wild"에서 모델의 신뢰성 평가는 "Real World"와 다르게 과대 측정되는 경우가 많음  
-  따라서, "Explaner"을 통해 다른 대안이 될 수 있는 방안을 제시함 
+  따라서, "Explain the model"을 통해 다른 대안이 될 수 있는 방안을 제시함 
 
 - 참고. 잘못된 모델 평가를 일으키는 원인
   1. Data Leakage: 
@@ -58,7 +58,41 @@
   2. Dataset Shift: 
      - Test 데이터 셋의 특성이 Train 데이터 셋과 다른 경우
  
- ### 3. Local Interpretable Model-Agnostic Explanations. 
+##### Desired Characteristics for Explainers 
+1. __interpretable__: 사람이 해석가능한 모델, 즉 이해하기 쉬워야함
+2. __local fidelity__: locally faithful - 즉, 예측 instance 부근에서는 모델이 어떻게 동작하는지에 대해서 표현 가능해야함 
+3. __model-agnostic__: Explainer는 어떤 모델이든 설명 가능해야함
  
+### 3. Local Interpretable Model-Agnostic Explanations
+
+#### 3.1 Interpretable Data Representations
+- 모델에서 사용된 실제 Feature와는 다른 사람이 이해할 수 있는 __interpretable representation__ 을 사용
+- Ex) interpretable representation  
+  - 텍스트: 단어의 존재 유무를 표현하는 binary vector  
+  - 이미지: super-pixel의 유무
+- 모델에서 사용한 original representation은 ![](../data/LIME_denote_1.gif) 라고 할때, interpretable representation은 ![](../data/LIME_denote_2.gif)  
+   즉, 어떤 단어나 픽셀의 값이 '있다' 또는 '없다' 여부만을 표현함
+   
+#### 3.2 Fidelity-Interpretability Trade-off
+- formulation
+  1. ![](../data/LIME_denote_3.gif) 
+     - explanation 모델
+     - G: 해석가능한 모델 클래스 (Linear model, decision trees 등)  
+     - g의 도메인: ![](../data/LIME_denote_4.gif) (즉, g는 해석가능한 component들의 유무에 따라 동작)  
+  2. ![](../data/LIME_denote_5.gif)
+     - 모델 g의 complexity
+     - decision tree ![](../data/LIME_denote_5.gif) : Tree의 depth
+     - linear models ![](../data/LIME_denote_5.gif) : non-zero weights의 수
+  3. ![](../data/LIME_denote_6.gif)
+     - 설명하고자 하는 모델
+     - Classification에서 f(x)는 x가 특정 class에 속할 probability (또는 binary indicator)을 의미
+  4. ![](../data/LIME_denote_7.gif)
+     - x의 locality를 나타내기 위한 proximity 척도
+  5. ![](../data/LIME_denote_8.gif)
+     - ![](../data/LIME_denote_7.gif) 의 locality에서 g가 f에 얼마나 unfaithful한지를 나타내는 척도 (Loss)
+     
+     
+  
+
  
   
