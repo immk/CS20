@@ -72,7 +72,8 @@
   - 이미지: super-pixel의 유무
 - 모델에서 사용한 original representation은 ![](../data/LIME_denote_1.gif) 라고 할때, interpretable representation은 ![](../data/LIME_denote_2.gif)  
    즉, 어떤 단어나 픽셀의 값이 '있다' 또는 '없다' 여부만을 표현함
-   
+
+
 #### 3.2 Fidelity-Interpretability Trade-off
 - Formulation
   1. ![](../data/LIME_denote_3.gif)  | explanation 모델
@@ -89,9 +90,11 @@
 - 즉, **Interpretability**와 **Local Fidelity**를 모두 확보하기 위한 Explanation을 찾는 것이 목표
 - 사람이 이해 가능하도록 Complexity는 낮추면서, Locality-aware Loss를 최소화해야함  
   ![](../data/LIME_LossFunction.PNG)
-  
+
+
 #### 3.3 Sampling for Local Exploration
   
-
+- LIME은 'model-agnostic'한 Explainer를 찾기 위해서 모델에 대한 어떠한 가정을 하지 않음
+- 
  
   
