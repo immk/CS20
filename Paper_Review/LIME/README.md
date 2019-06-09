@@ -43,10 +43,14 @@
  - __예시 2. "Christianity" 또는 "Atheism" 분류__
    ![LIME_process of explaining individual predictions](../data/LIME_Figure_2.PNG)
      - 알고리즘1/2에서 'Athenism'으로 판단한 관련성 높은 단어를 보여줌(magenta)
-     - 각각 모델의 예측에 대한 설명을 더해준다면 어떤 알고리즘이 정확하게 판단했는지 알수 있음  
-       (이 결과는 Accuracy와 같은 metric과 일치하지 않을 수 있음)
-     - 그러나 모델이 예측함에 있어서 어떤 인자가 중요하게 영향을 끼쳤는지에 대한 정보를 알수 있음
-  
+     - 위의 예시에서, 알고리즘2 모델은 정답을 맞췄지만 잘못된 방법으로 예측을 하고있음  
+       Posting이라는 단어는 학습 데이터셋에서 22%를 차지하지만, 그 중 99%가 "Atheism" Class에 존재하므로 classifier가 이를 통해 결과를 예측함  
+       explanation의 insight를 통해 dataset에 문제가 있음을 확인할 수 있으며, 또한 높은 성능을 가지는 classifier일지라도 모델을 신뢰하지 못함
+     
+     - 즉, 각각 모델의 예측에 대한 설명을 더해준다면 어떤 알고리즘이 정확하게 판단했는지 알수 있음
+     - 이 결과는 Accuracy와 같은 metric과 일치하지 않을 수 있지만 
+       모델이 예측함에 있어서 어떤 인자가 중요하게 영향을 끼쳤는지에 대한 정보를 알수 있음
+     
 - "In the Wild"에서 모델의 신뢰성 평가는 "Real World"와 다르게 과대 측정되는 경우가 많음  
   따라서, "Explain the model"을 통해 다른 대안이 될 수 있는 방안을 제시함 
 
@@ -105,7 +109,7 @@
   - Black-box 모델의 decision boundary는 굉장히 복잡함 (위의 그림에서 빨간색과 파란색을 나뉘는 경계)
   - 이를 Linear Model로 근사화하는 것은 불가능함
   - 설명하고자 하는 데이터(굵은 빨간색 십자가)의 근방(local)만 본다면, 그 주변만 근사화한 선형 함수를 만들 수 있음
-  - LIME은 instance를 sampling하고 f를 사용하여 예측값을 얻고 그리고 instance의 근접성에 따라 weight 값을 부여함(O/x 및 크기)으로써 해석 가능한 모델(데쉬 라인)를 학습함
+  - LIME은 instance를 sampling하고 f를 사용하여 예측값을 얻고 그리고 instance의 근접성에 따라 weight 값을 부여함(O/x 및 크기)으로써 해석 가능한 모델(데쉬 라인)를 학습
   - 즉, represenataion 데이터(z)와 원본 데이터(x) 간의 locality를 weight로 하여 새로 만들어진 sample과 Label 정보를 통해 해석 가능한 simple model을 학습함
 
 #### 3.4 Sparse Linear Explanations
@@ -116,6 +120,14 @@
   - Distance Function D  
     - Text - cosine distance
     - Image - L2 distance
+    
+- **Sparse Linear Explanations using LIME**
+  ![](../data/LIME_Algorithm_3.PNG)
+  
+- **interpretable representation 및 G의 한계점**
+  1. 특정 Interpretable Representation은 모델의 동작을 해석할 만큼 강력하지 못함 
+     ex. 이미지가 레트로인지 판단하는 데에서는 binary vector만으로 해석이 불가능함
+  2. Prediction의 locality에서도 highly non-linear한 경우라면, G의 해석력을 신뢰하지 못함
 
 ### 4. Submodular Pick for Explaining Models
 
