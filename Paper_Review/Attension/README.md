@@ -80,13 +80,35 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
   - STEP 5. STEP5에서 구한 Softmax 값과 Value 값을 곱함 (Weighted Value)
   - STEP 6. Weighted Value 벡터들을 모두 더함
 
-
 #### 2) Multi-Head Attention
+  <img src="../data/Transformer_Multi_head_attention.png" width="70%">
+
+- 위의 구조와 같이 여러개의 Attention Layer를 Linearly Project 시킴
+- 즉, Multi-Head Attention은 Attention Layer가 여러개의 'representation subspace'를 갖게 해줌
 
 
 #### 3) Applications of Attention in our Model
+Transformer는 아래 3가지 방법으로 multi-head Attention를 사용할 수 있음
+
+1) "encoder-decoder Attetion" Layer에서,  
+    Queries는 이전 Decoder layer로 부터 전달 받은 값이며 keys와 values는 encoder의 output으로 부터 전달받은 값.
+    Decoder의 모든 포지션이 input sequence의 모든 포지션에 관여할 수 있음 (Sequence-to-Sequence Model)
+    
+2) 현재의 Self-Attnetion Layer의 Keys, Values, Queries는 이전 Encoder Layer에서 온 값을 사용함  
+   즉, Encoder의 각 포지션은 이전 Encoder Layer의 모든 포지션에 관여할 수 있음  
+   
+3) Encoder와 유사하지만, Decoder의 각 포지션은 그 포지션을 포함한 곳 까지에 대해서만 관여할 수 있음.  
+   Decoder에서는 Masking을 통해서 해당 포지션의 이후 정보를 차단함 (무한대 값으로 설정함으로써 정보를 손실시킴)  
+   
+   
+### 3-3. Position-wise Feed-Forward Networks
+   
+
+### 3-4. Embeddings and Softmax
 
 
+
+### 3-5. Positional Encoding
 
 
 
