@@ -67,11 +67,12 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
 - Input은 Query, Key, Value로 구성
 - Q, K, V를 통한 dot-product 및 Softmax 등의 연산 과정을 통해 Value의 weight 값을 계산
 - The matrix of outputs as:
-  <br> ![](../data/Transformer_Output_Matrix.PNG)
-
+  <br> 
+  ![](../data/Transformer_Output_Matrix.PNG)
+  <br>
 - __Self Attention 계산 과정__
   <img src="../data/Transformer_Self_Attension_Matrix.png" width="80%">
-
+  <br>
   - STEP 1. Query, Key, Value Vector 생성
   - STEP 2. Score 계산 (Encoding 시 다른 단어들에 대해서 얼마나 집중 해야 할지를 결정함)
   - STEP 3. Score 값을 Root(Dimension Of Key)로 나눠줌
