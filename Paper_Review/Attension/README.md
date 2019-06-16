@@ -6,12 +6,12 @@
 <br>
 
 
-### Abstract  
+## Abstract  
 CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple Network)에 대해 제안함  
   
 <br>
 
-### 1. Introduction  
+## 1. Introduction  
 
 - 참고. RNN의 기본 구조  
   - Sequence Model
@@ -22,7 +22,7 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
   
 <br>
   
-### 2. Background
+## 2. Background
 
 - 참고 1. Sequential Computation을 줄이기 위한 방법
   - Extended Neural GPU, ByteNet, ConvS2S
@@ -40,30 +40,30 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
   
 <br>
 
-### 3. Model Architecture
+## 3. Model Architecture
 - Overall Model Architecture of Transformer  
   모델의 전반적인 구조는 아래와 같이, 크게 Encoder와 Decoder로 구성되어 있음
   ![](../data/Transformer_Model_Architecture.PNG)
 
-#### 3-1. Encoder and Decoder Stacks
-##### 1) Encoder
+### 3-1. Encoder and Decoder Stacks
+#### 1) Encoder
 - 각각의 Layer는 두가지 sub-layer로 구성되어 있음 (multi-head self-attention +  fully connected feed-forward network)
 - 각각의 sub-layer는 residual connection과 이를 Normalization하는 부분으로 구성되어 있음
 
-##### 2) Decoder
+#### 2) Decoder
 - 기존 Encoder와 동일한 두가지 sub-layer 외 한가지 sub-layer를 추가함 (즉, sub-layer로 구성되어 있음)
 - Masked multi-head self-attention + multi-head self-attention +  fully connected feed-forward network
 - encoder와 마찬가지로 각각의 sub-layer는 residual Connection 및 Normalization 을 수행함
 - Maksing을 통해, 포지션 i의 prediction이 i보다 하위 포지션에 있는 output에만 의존할 수 있도록 함
 
-#### 3-2. Attention
+### 3-2. Attention
 - Attention은 Query 및 key-value Pair를 토대로 output을 매핑
 - output은 Value의 weighted sum으로 계산함
 - 각각의 Value의 weight 값은 Query-이에 상응하는 key의 compatability function에 의해 계산 가능함
 <br>
   <img src="../data/Transformer_Attention.PNG" width="80%"> 
 
-##### 1) Scaled Dot-Product Attention
+#### 1) Scaled Dot-Product Attention
 - Input은 Query, Key, Value로 구성
 - Q, K, V를 통한 dot-product 및 Softmax 등의 연산 과정을 통해 Value의 weight 값을 계산
 - The matrix of outputs as:
@@ -81,10 +81,10 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
   - STEP 6. Weighted Value 벡터들을 모두 더함
 
 
-##### 2) Multi-Head Attention
+#### 2) Multi-Head Attention
 
 
-##### 3) Applications of Attention in our Model
+#### 3) Applications of Attention in our Model
 
 
 
@@ -92,7 +92,7 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
 
 <br>
 
-### 참고 자료
+## 참고 자료
 1) Attention Mechanism 관련 자료
 > https://www.youtube.com/watch?v=6aouXD8WMVQ  
 > https://yjucho1.github.io/attention/attention/  
