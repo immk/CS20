@@ -26,7 +26,7 @@
      - 모델 자체의 신뢰성을 해결하기 위해 설명력있는 representative instance를 선택하는 방법
      - 중요 정보를 담고 있는 소수의 인스턴스를 추려내기 위한 과정
 
-
+<br>
 ## 2. The Case for Explanations
 - "Explaning a Prediction" 이란?  
    - instance component (ex. 텍스트 단어/이미지 patch)와 model의 예측 사이의 관계를 이해할 수 있도록 정보를 제공하는 것
@@ -65,7 +65,8 @@
 1. __interpretable__: 사람이 해석가능한 모델, 즉 이해하기 쉬워야함
 2. __local fidelity__: locally faithful - 즉, 예측 instance 부근에서는 모델이 어떻게 동작하는지에 대해서 표현 가능해야함 
 3. __model-agnostic__: Explainer는 어떤 모델이든 설명 가능해야함
- 
+
+<br>
 ## 3. Local Interpretable Model-Agnostic Explanations
 
 ### 3.1 Interpretable Data Representations
@@ -128,6 +129,7 @@
      ex. 이미지가 레트로인지 판단하는 데에서는 binary vector만으로 해석이 불가능함
   2. Prediction의 locality에서도 highly non-linear한 경우라면, G의 해석력을 신뢰하지 못함
 
+<br>
 ## 4. Submodular Pick for Explaining Models
 
 
