@@ -3,14 +3,14 @@
 ---
 <br>
 
-### 1. Introduction
+## 1. Introduction
 
 <br>
  
-### 2. Towards Reducing Internal Covariate Shift
+## 2. Towards Reducing Internal Covariate Shift
 <br>
 
-### 3. Normalization via Mini-Batch Statistics  
+## 3. Normalization via Mini-Batch Statistics  
 1) 각각의 Scalar Feature를 정규화함 (mean:0, variance:1)  
    즉, 각각의 d-dimension input x=(x1, ...., xd)에 대해서 Standardization 수행  
    - 그러나, 각각의 Input에 대해 Standardization 수행 시 layer가 표현하고자 하는 것을 제대로 표현하지 못할 수 있음.  
@@ -34,7 +34,7 @@
   - BN Transform을 통해 identity transformation을 표현 가능함.
     - gamma : (Var[x_k])**0.5  / beta: E[x_k]
 
-#### 3.1 Training and Inference with Batch-Normalized Networks  
+### 3.1 Training and Inference with Batch-Normalized Networks  
 
    ![BN Algorithm_2](../data/BatchNorm_algorithm_2.PNG)
 
@@ -45,12 +45,12 @@
 <img src=../data/BatchNorm_algorithm_pre.PNG.jpg width="40%">
 
 
-#### 3.2 Batch-Normalized Convolutional Networks  
+### 3.2 Batch-Normalized Convolutional Networks  
 ![BN Algorithm_g](../data/BatchNorm_algorithm_g.PNG)
  - W, b : 학습 parameter
  - g(.) : non-linearity function (ex. sigmoid, ReLU)
 
-#### 3.3 Batch Normalization enables higher learning rates
+### 3.3 Batch Normalization enables higher learning rates
 - too-high learning rate: gradient issue(exploding 또는 vanishing gradient) 또는 local minima issue를 발생시킴  
 - 그러나, activation의 normalizing을 통해 non-linearity 영역에서 saturated 영역에 갇히는 것을 방지  
   (gradient == 0인 지점으로 가는것을 막아줌)  
@@ -59,9 +59,9 @@
 
 ![BN Algorithm_g](../data/BatchNorm_algorithm_3.PNG)
 
-#### 3.4 Batch Normalization regularizes the model 
+### 3.4 Batch Normalization regularizes the model 
 - Network Generalization 효과
 - Overfitting을 막기위해 drop out 기법을 사용하나, BN에서는 drop out을 사용하지 않거나 strength를 줄일 수 있음
 
 <br>
-### 4. Experiments
+## 4. Experiments
