@@ -43,7 +43,7 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
 ### 3. Model Architecture
 - Overall Model Architecture of Transformer  
   모델의 전반적인 구조는 아래와 같이, 크게 Encoder와 Decoder로 구성되어 있음
-![](../data/Transformer_Model_Architecture.PNG)
+  <img src="../data/Transformer_Model_Architecture.PNG" width="80%"> 
 
 #### 3-1. Encoder and Decoder Stacks
 ##### 1) Encoder
@@ -60,7 +60,7 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
 - Attention은 Query 및 key-value Pair를 토대로 output을 매핑
 - output은 Value의 weighted sum으로 계산함
 - 각각의 Value의 weight 값은 Query-이에 상응하는 key의 compatability function에 의해 계산 가능함
-  ![](../data/Transformer_Attention.PNG)
+  <img src="../data/Transformer_Attention.PNG" width="80%"> 
 
 ##### 1) Scaled Dot-Product Attention
 - Input은 Query, Key, Value로 구성  
@@ -69,7 +69,7 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
   ![](../data/Transformer_Output_Matrix.PNG)
 
 - __Self Attention 계산 과정__
-  ![](../data/Transformer_Self_Attension_Matrix.png)
+  <img src="../data/Transformer_Self_Attension_Matrix.png" width="80%">
 
   - STEP 1. Query, Key, Value Vector 생성 
   - STEP 2. Score 계산 (Encoding 시 다른 단어들에 대해서 얼마나 집중 해야 할지를 결정함)  
