@@ -3,7 +3,7 @@
 ---
 <br>
 
-### Abstract
+## Abstract
 - __요약__
   - Residual Network는 optimize하기 쉽고, depth가  커어져도 성능을 얻을 수 있음! 
   - cf. depth는 visual recognition task에서 매우 중요
@@ -11,8 +11,9 @@
   - ImageNet Dataset 
   - 152 layer depth (cf. VGG Net보다 8배 깊음, 그럼에도 VGG보다 낮은 complexity를 지님)
   - 3.57% error
+<br>
 
-### 1. Introduction
+## 1. Introduction
 - Deep convolutional Neural Network가 image classification에 획기적인 발전을 가져왔음  
   Network의 depth가 중요함 !  
   why ?  depth의 깊이에 따라 feature의 level(low/mid/high) 이 다양해 질 수 있기 때문  
@@ -36,15 +37,16 @@
      Identity mapping을 fitting하는 것보다 Residual mapping을 0으로 optimize 하는 것이 더 쉬움
    - shortcut connection : F(x) + x  
      Identity shortcut connection은 추가 parameter 및 computational complexity가 없음 
+<br>
 
-### 3. Deep Residual Learning 
-#### 3.1 Residual Learning
+## 3. Deep Residual Learning 
+### 3.1 Residual Learning
 - residual function : F(x) = H(x) - x 
 - F(x)는 output과 input의 잔차를 학습함, 따라서 이를 Residual Learning이라 칭함
 - H(x)를 직접적으로 학습시키는 것 보다, identity mapping을 통해 F(x)를 학습시키는 것이 더 쉬움
   즉, F(x)는 잔차만 학습
 
-#### 3.2 Identity Mapping by Shortcuts
+### 3.2 Identity Mapping by Shortcuts
 - element-wise addition : F(x) + x  
   즉,  F(x)의 출력 dimension과 x의 dimension은 동일해야 함  
   
@@ -58,7 +60,7 @@
 - F는 fully-connected Layer, Convolutional layer 등을 사용할 수 있음  
 
 
-#### 3.3 Network Architectures
+### 3.3 Network Architectures
 - Plain network  
 VGG nets vs Plain Network vs Residual Network  
 VGG net 보다 적은 fileter를 사용하고 낮음 complexity를 보여줌  
@@ -70,4 +72,4 @@ VGG net 보다 적은 fileter를 사용하고 낮음 complexity를 보여줌
     - (A) zero padding
     - (B) Projection shortcut 
 
-#### 3.4 Implementation
+### 3.4 Implementation
