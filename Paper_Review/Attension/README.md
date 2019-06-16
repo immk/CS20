@@ -67,7 +67,7 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
 - Input은 Query, Key, Value로 구성
 - Q, K, V를 통한 dot-product 및 Softmax 등의 연산 과정을 통해 Value의 weight 값을 계산
 - The matrix of outputs as:
-  ![](../data/Transformer_Output_Matrix.PNG)
+  <br> ![](../data/Transformer_Output_Matrix.PNG)
 
 - __Self Attention 계산 과정__
   <img src="../data/Transformer_Self_Attension_Matrix.png" width="80%">
