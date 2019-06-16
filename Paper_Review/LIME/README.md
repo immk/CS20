@@ -3,8 +3,7 @@
 ---
 <br>
 
-
-### 1. Introduction
+## 1. Introduction
 - Machine Learning의 Model이 복잡해질수록 예측 정확도는 올라가지만 예측 결과를 해석하는 것은 매우 어려움  
   → 'Black Box'로 불림
 - 새로운 모델을 deploy하거나 예측 결과를 기반으로 어떤 액션을 취하기 위해서는 model를 이해하는 것이 매우 중요함  
@@ -28,7 +27,7 @@
      - 중요 정보를 담고 있는 소수의 인스턴스를 추려내기 위한 과정
 
 
-### 2. The Case for Explanations
+## 2. The Case for Explanations
 - "Explaning a Prediction" 이란?  
    - instance component (ex. 텍스트 단어/이미지 patch)와 model의 예측 사이의 관계를 이해할 수 있도록 정보를 제공하는 것
  
@@ -62,14 +61,14 @@
   2. Dataset Shift: 
      - Test 데이터 셋의 특성이 Train 데이터 셋과 다른 경우
  
-##### Desired Characteristics for Explainers 
+#### Desired Characteristics for Explainers 
 1. __interpretable__: 사람이 해석가능한 모델, 즉 이해하기 쉬워야함
 2. __local fidelity__: locally faithful - 즉, 예측 instance 부근에서는 모델이 어떻게 동작하는지에 대해서 표현 가능해야함 
 3. __model-agnostic__: Explainer는 어떤 모델이든 설명 가능해야함
  
-### 3. Local Interpretable Model-Agnostic Explanations
+## 3. Local Interpretable Model-Agnostic Explanations
 
-#### 3.1 Interpretable Data Representations
+### 3.1 Interpretable Data Representations
 - 모델에서 사용된 실제 Feature와는 다른 사람이 이해할 수 있는 __interpretable representation__ 을 사용
 - Ex) interpretable representation  
   - 텍스트: 단어의 존재 유무를 표현하는 binary vector  
@@ -78,7 +77,7 @@
    즉, 어떤 단어나 픽셀의 값이 '있다' 또는 '없다' 여부만을 표현함
 
 
-#### 3.2 Fidelity-Interpretability Trade-off
+### 3.2 Fidelity-Interpretability Trade-off
 - Formulation
   1. ![](../data/LIME_denote_3.gif)  | explanation 모델
      - G: 해석가능한 모델 클래스 (Linear model, decision trees 등)  
@@ -96,7 +95,7 @@
   ![](../data/LIME_LossFunction.PNG)
 
 
-#### 3.3 Sampling for Local Exploration
+### 3.3 Sampling for Local Exploration
   
 - LIME은 'model-agnostic'한 Explainer를 찾기 위해서 모델에 대한 어떠한 가정을 하지 않음
 - 해석 가능한 Input이 변함에 따라 f(x)의 local 동작이 어떻게 변하는지에 대해 학습하기 위해서, ![](../data/LIME_denote_7.gif)에 의해 가중화된 sampling 기법을 통해 ![](../data/LIME_denote_8.gif)를 근사화함
@@ -112,7 +111,7 @@
   - LIME은 instance를 sampling하고 f를 사용하여 예측값을 얻고 그리고 instance의 근접성에 따라 weight 값을 부여함(O/x 및 크기)으로써 해석 가능한 모델(데쉬 라인)를 학습
   - 즉, represenataion 데이터(z)와 원본 데이터(x) 간의 locality를 weight로 하여 새로 만들어진 sample과 Label 정보를 통해 해석 가능한 simple model을 학습함
 
-#### 3.4 Sparse Linear Explanations
+### 3.4 Sparse Linear Explanations
 - **Loss Function**  
   ![](../data/LIME_LossFunction_2.PNG)
   
@@ -129,7 +128,7 @@
      ex. 이미지가 레트로인지 판단하는 데에서는 binary vector만으로 해석이 불가능함
   2. Prediction의 locality에서도 highly non-linear한 경우라면, G의 해석력을 신뢰하지 못함
 
-### 4. Submodular Pick for Explaining Models
+## 4. Submodular Pick for Explaining Models
 
 
 
