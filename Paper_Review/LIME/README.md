@@ -27,6 +27,7 @@
      - 중요 정보를 담고 있는 소수의 인스턴스를 추려내기 위한 과정
 
 <br>
+
 ## 2. The Case for Explanations
 - "Explaning a Prediction" 이란?  
    - instance component (ex. 텍스트 단어/이미지 patch)와 model의 예측 사이의 관계를 이해할 수 있도록 정보를 제공하는 것
@@ -67,6 +68,7 @@
 3. __model-agnostic__: Explainer는 어떤 모델이든 설명 가능해야함
 
 <br>
+
 ## 3. Local Interpretable Model-Agnostic Explanations
 
 ### 3.1 Interpretable Data Representations
@@ -130,6 +132,7 @@
   2. Prediction의 locality에서도 highly non-linear한 경우라면, G의 해석력을 신뢰하지 못함
 
 <br>
+
 ## 4. Submodular Pick for Explaining Models
 
 
