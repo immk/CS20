@@ -46,11 +46,11 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
 ![](../data/Transformer_Model_Architecture.PNG)
 
 #### 3-1. Encoder and Decoder Stacks
-1) Encoder
+__1) Encoder__
 - 각각의 Layer는 두가지 sub-layer로 구성되어 있음 (multi-head self-attention +  fully connected feed-forward network)
 - 각각의 sub-layer는 residual connection과 이를 Normalization하는 부분으로 구성되어 있음
 
-2) Decoder
+__2) Decoder__
 - 기존 Encoder와 동일한 두가지 sub-layer 외 한가지 sub-layer를 추가함 (즉, sub-layer로 구성되어 있음)
 - Masked multi-head self-attention + multi-head self-attention +  fully connected feed-forward network
 - encoder와 마찬가지로 각각의 sub-layer는 residual Connection 및 Normalization 을 수행함
@@ -63,9 +63,20 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
   ![](../data/Transformer_Attention.PNG)
 
 1) Scaled Dot-Product Attention
-- Input은 Query, Key, Value로 구성되어 있으며, dot-product 및 Softmax 등의 연산 과정을 통해 Value의 weight 값을 계산  
+- Input은 Query, Key, Value로 구성  
+- Q, K, V를 통한 dot-product 및 Softmax 등의 연산 과정을 통해 Value의 weight 값을 계산  
 - The matrix of outputs as:  
   ![](../data/Transformer_Output_Matrix.PNG)
+
+- __Self Attention 계산 과정__
+  ![](../data/Transformer_Self_Attension_Matrix.png)
+
+  - STEP 1. Query, Key, Value Vector 생성 
+  - STEP 2. Score 계산 (Encoding 시 다른 단어들에 대해서 얼마나 집중 해야 할지를 결정함)  
+  - STEP 3. Score 값을 Root(Dimension Of Key)로 나눠줌 
+  - STEP 4. Softmax를 취함
+  - STEP 5. STEP5에서 구한 Softmax 값과 Value 값을 곱함 (Weighted Value)
+  - STEP 6. Weighted Value 벡터들을 모두 더함
 
 
 2) Multi-Head Attention
