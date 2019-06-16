@@ -59,22 +59,22 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
 #### 3-2. Attention
 - Attention은 Query 및 key-value Pair를 토대로 output을 매핑
 - output은 Value의 weighted sum으로 계산함
-- 각각의 Value의 weight 값은 Query-이에 상응하는 key의 compatability function에 의해 계산 가능함  
-
+- 각각의 Value의 weight 값은 Query-이에 상응하는 key의 compatability function에 의해 계산 가능함
+<br>
   <img src="../data/Transformer_Attention.PNG" width="80%"> 
 
 ##### 1) Scaled Dot-Product Attention
-- Input은 Query, Key, Value로 구성  
-- Q, K, V를 통한 dot-product 및 Softmax 등의 연산 과정을 통해 Value의 weight 값을 계산  
-- The matrix of outputs as:  
+- Input은 Query, Key, Value로 구성
+- Q, K, V를 통한 dot-product 및 Softmax 등의 연산 과정을 통해 Value의 weight 값을 계산
+- The matrix of outputs as:
   ![](../data/Transformer_Output_Matrix.PNG)
 
 - __Self Attention 계산 과정__
   <img src="../data/Transformer_Self_Attension_Matrix.png" width="80%">
 
-  - STEP 1. Query, Key, Value Vector 생성 
-  - STEP 2. Score 계산 (Encoding 시 다른 단어들에 대해서 얼마나 집중 해야 할지를 결정함)  
-  - STEP 3. Score 값을 Root(Dimension Of Key)로 나눠줌 
+  - STEP 1. Query, Key, Value Vector 생성
+  - STEP 2. Score 계산 (Encoding 시 다른 단어들에 대해서 얼마나 집중 해야 할지를 결정함)
+  - STEP 3. Score 값을 Root(Dimension Of Key)로 나눠줌
   - STEP 4. Softmax를 취함
   - STEP 5. STEP5에서 구한 Softmax 값과 Value 값을 곱함 (Weighted Value)
   - STEP 6. Weighted Value 벡터들을 모두 더함
