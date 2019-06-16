@@ -41,7 +41,8 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
 <br>
 
 ###  3. Model Architecture
-
+- Overall Model Architecture of Transformer
+![](../data/Transformer_Model_Architecture.PNG)
 
   
 <br>
