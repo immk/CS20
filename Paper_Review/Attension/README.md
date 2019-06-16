@@ -102,8 +102,7 @@ Transformer는 아래 3가지 방법으로 multi-head Attention를 사용할 수
    
 3) Encoder와 유사하지만, Decoder의 각 포지션은 그 포지션을 포함한 곳 까지에 대해서만 관여할 수 있음.  
    Decoder에서는 Masking을 통해서 해당 포지션의 이후 정보를 차단함 (무한대 값으로 설정함으로써 정보를 손실시킴)  
-   
-   
+<br>
    
 ### 3-3. Position-wise Feed-Forward Networks
    
