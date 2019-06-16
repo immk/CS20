@@ -3,12 +3,12 @@
 ---
 <br>
 
-### Abstract
-
-
 ### 1. Introduction
 
+<br>
+ 
 ### 2. Towards Reducing Internal Covariate Shift
+<br>
 
 ### 3. Normalization via Mini-Batch Statistics  
 1) 각각의 Scalar Feature를 정규화함 (mean:0, variance:1)  
@@ -63,5 +63,5 @@
 - Network Generalization 효과
 - Overfitting을 막기위해 drop out 기법을 사용하나, BN에서는 drop out을 사용하지 않거나 strength를 줄일 수 있음
 
-
+<br>
 ### 4. Experiments
