@@ -63,6 +63,7 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
 <br>
   <img src="../data/Transformer_Attention.PNG" width="80%"> 
 
+
 #### 1) Scaled Dot-Product Attention
 - Input은 Query, Key, Value로 구성
 - Q, K, V를 통한 dot-product 및 Softmax 등의 연산 과정을 통해 Value의 weight 값을 계산
@@ -71,8 +72,9 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
   ![](../data/Transformer_Output_Matrix.PNG)
   <br>
 - __Self Attention 계산 과정__
-  <img src="../data/Transformer_Self_Attension_Matrix.png" width="80%">
+  <img src="../data/Transformer_Self_Attension_Matrix.png" width="80%">  
   <br>
+  
   - STEP 1. Query, Key, Value Vector 생성
   - STEP 2. Score 계산 (Encoding 시 다른 단어들에 대해서 얼마나 집중 해야 할지를 결정함)
   - STEP 3. Score 값을 Root(Dimension Of Key)로 나눠줌
@@ -85,6 +87,7 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
 
 - 위의 구조와 같이 여러개의 Attention Layer를 Linearly Project 시킴
 - 즉, Multi-Head Attention은 Attention Layer가 여러개의 'representation subspace'를 갖게 해줌
+
 
 
 #### 3) Applications of Attention in our Model
@@ -101,10 +104,14 @@ Transformer는 아래 3가지 방법으로 multi-head Attention를 사용할 수
    Decoder에서는 Masking을 통해서 해당 포지션의 이후 정보를 차단함 (무한대 값으로 설정함으로써 정보를 손실시킴)  
    
    
+   
 ### 3-3. Position-wise Feed-Forward Networks
    
 
+
+
 ### 3-4. Embeddings and Softmax
+
 
 
 
