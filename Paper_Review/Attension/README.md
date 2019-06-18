@@ -119,9 +119,9 @@ Fully connected Layer는 ReLU를 포함한 2개의 Linear transformation으로 �
 (단, embedding Layer의 Weight Matrix에는 'd_model ** 0.5'를 곱함)  
 
 ### 3-5. Positional Encoding
-Transformer는 CNN과 RNN 구조가 없기 때문에, Sequence 정보를 사용하기 위해서는 상대적 또는 절대적인 포지션에 대한 정보를 넣어줘야함
+Transformer는 CNN과 RNN 구조가 없기 때문에, Sequence 정보를 사용하기 위해서는 상대적 또는 절대적인 포지션에 대한 정보를 넣어줘야함  
 본 논문에서는 sine과 cosine 함수를 사용하였으며, Encoder/Decoder의 Input Embedding 벡터에 positional Encoding 값을 더함  
-  <img src="../data/Transformer_PE.PNG" width="40%">
+  <img src="../data/Transformer_PE.PNG" width="30%">
 <br>
 
 
