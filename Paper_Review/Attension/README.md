@@ -51,7 +51,7 @@ CNN과 RNN을 없애고 Attention Mechanism에 기반을 둔 Transformer(Simple 
 - 각각의 sub-layer는 residual connection과 이를 Normalization하는 부분으로 구성되어 있음
 
 #### 2) Decoder
-- 기존 Encoder와 동일한 두가지 sub-layer 외 한가지 sub-layer를 추가함 (즉, sub-layer로 구성되어 있음)
+- 기존 Encoder와 동일한 두가지 sub-layer 외 한가지 sub-layer를 추가함 (즉, 총 3개의 sub-layer로 구성되어 있음)
 - Masked multi-head self-attention + multi-head self-attention +  fully connected feed-forward network
 - encoder와 마찬가지로 각각의 sub-layer는 residual Connection 및 Normalization 을 수행함
 - Maksing을 통해, 포지션 i의 prediction이 i보다 하위 포지션에 있는 output에만 의존할 수 있도록 함
@@ -102,17 +102,20 @@ Transformer는 아래 3가지 방법으로 multi-head Attention를 사용할 수
    
 3) Encoder와 유사하지만, Decoder의 각 포지션은 그 포지션을 포함한 곳 까지에 대해서만 관여할 수 있음.  
    Decoder에서는 Masking을 통해서 해당 포지션의 이후 정보를 차단함 (무한대 값으로 설정함으로써 정보를 손실시킴)  
-<br>
-   
+
 ### 3-3. Position-wise Feed-Forward Networks
-   
+각각의 Encoder/Decoder에는 Attension Sub-layer 외에도 Fully Connected Feed-Forward Network를 포함  
+Fully connected Layer는 ReLU를 포함한 2개의 Linear transformation으로 구성됨  
+  <img src="../data/Transformer_FFN.PNG" width="50%">
 
-
+이 외, 다른 방법으로는 kernel size가 1인 2개의 Convolution을 사용  
 
 ### 3-4. Embeddings and Softmax
+1) Input/Output token을 벡터로 변환하기 위해 learned Embedding을 사용함 (다른 Sequence Transduction Model과 동일)
+2) Decorder Output에서 예측된 Next-token의 확률값으로 변환하기 위해 learned Linear transformation 및 Softmax 함수를 사용
 
-
-
+본 논문에서는 두개의 Embedding Layer와 Pre-sofrmax Linear transformation의 weight Matrix를 공유해서 학습함  
+(단, embedding Layer의 Weight Matrix에는 'd_model ** 0.5'를 곱함)  
 
 ### 3-5. Positional Encoding
 
