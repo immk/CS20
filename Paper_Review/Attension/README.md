@@ -111,17 +111,19 @@ Fully connected Layer는 ReLU를 포함한 2개의 Linear transformation으로 �
 이 외, 다른 방법으로는 kernel size가 1인 2개의 Convolution을 사용  
 
 ### 3-4. Embeddings and Softmax
-1) Input/Output token을 벡터로 변환하기 위해 learned Embedding을 사용함 (다른 Sequence Transduction Model과 동일)
+1) Input/Output token을 벡터로 변환하기 위해 learned Embedding을 사용함  
+   (다른 Sequence Transduction Model과 동일)
 2) Decorder Output에서 예측된 Next-token의 확률값으로 변환하기 위해 learned Linear transformation 및 Softmax 함수를 사용
 
 본 논문에서는 두개의 Embedding Layer와 Pre-sofrmax Linear transformation의 weight Matrix를 공유해서 학습함  
 (단, embedding Layer의 Weight Matrix에는 'd_model ** 0.5'를 곱함)  
 
 ### 3-5. Positional Encoding
-
-
-
+Transformer는 CNN과 RNN 구조가 없기 때문에, Sequence 정보를 사용하기 위해서는 상대적 또는 절대적인 포지션에 대한 정보를 넣어줘야함
+본 논문에서는 sine과 cosine 함수를 사용하였으며, Encoder/Decoder의 Input Embedding 벡터에 positional Encoding 값을 더함  
+  <img src="../data/Transformer_PE.PNG" width="40%">
 <br>
+
 
 ## 참고 자료
 1) Attention Mechanism 관련 자료
